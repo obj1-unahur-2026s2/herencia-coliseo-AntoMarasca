@@ -1,9 +1,17 @@
-object pepita {
-  var energy = 100
-
-  method energy() = energy
-
-  method fly(minutes) {
-    energy = energy - minutes * 3
+class ArmasDeFilo {
+  method filoDelArma()
+  method longitud()
+  method valorDeAtaque() {
+    return self.filoDelArma() * self.longitud()
   }
+}
+
+class ArmasContundentes {
+  method pesoDelArma()
+  method poderDeAtaque() = self.pesoDelArma()
+}
+
+class Espada inherits ArmasDeFilo {
+  override method filoDelArma() = 0
+  override method longitud() = 30
 }
